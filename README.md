@@ -5,32 +5,32 @@ This project demonstrates how to predict stock prices using Long Short-Term Memo
 ## Project Overview
 
 ### Key Features:
-- **Exploratory Data Analysis (EDA):** Analyzing trends in closing prices, daily returns, and volatility.
-- **Feature Engineering:** Adding moving averages (MA7, MA30), daily returns, and volatility to better capture stock price movements.
-- **LSTM Model:** Predict future closing prices using past data and engineered features.
-- **Performance Evaluation:** The model is evaluated using Root Mean Squared Error (RMSE) and accuracy in predicting the price movement direction.
+- Exploratory Data Analysis (EDA): Analyzing trends in closing prices, daily returns, and volatility.
+- Feature Engineering: Adding moving averages (MA7, MA30), daily returns, and volatility to better capture stock price movements.
+- LSTM Model: Predict future closing prices using past data and engineered features.
+- Performance Evaluation: The model is evaluated using Root Mean Squared Error (RMSE) and accuracy in predicting the price movement direction.
 
 ## Dataset:
-- **Fields:**
+- Fields:
   - Open
   - Close
   - High
   - Low
-  - Volume (Converted from M for millions and B for billions)
+  - Volume (converted from M for millions and B for billions)
   - Change Rate (%)
-- **Time Range:** The dataset contains stock price data up to the year 2023.
+- Time Range: The dataset contains stock price data up to the year 2023.
 
 ## Evaluation Metrics:
-- **RMSE (Root Mean Squared Error):** Measures the difference between predicted and actual values.
-- **Price Movement Accuracy:** Measures the accuracy in predicting whether the stock price will go up or down.
+- RMSE (Root Mean Squared Error): Measures the difference between predicted and actual values.
+- Price Movement Accuracy: Measures the accuracy in predicting whether the stock price will go up or down.
 
 ## Model Architecture
 
 The model uses LSTM layers to capture the temporal dependencies of stock prices. The architecture is as follows:
-- **LSTM Layer 1:** 50 units, returns sequences.
-- **LSTM Layer 2:** 50 units, does not return sequences.
-- **Dense Layer 1:** 25 units.
-- **Dense Layer 2:** 1 unit (predicts the closing price).
+- LSTM Layer 1: 50 units, returns sequences.
+- LSTM Layer 2: 50 units, does not return sequences.
+- Dense Layer 1: 25 units.
+- Dense Layer 2: 1 unit (predicts the closing price).
 
 ## Installation and Requirements
 
@@ -39,20 +39,22 @@ To run this project locally, you'll need to install the following dependencies:
 ```bash
 pip install pandas numpy matplotlib scikit-learn keras seaborn
 
-Running the Project
+
+# Running the Project
+
 To successfully run the project and replicate the results, follow these steps:
 
-1. Clone the Repository
+## 1. Clone the Repository
 First, clone this repository to your local machine using:
 
-bash
-Copy code
+```bash
 git clone https://github.com/yourusername/stock-price-prediction.git
 cd stock-price-prediction
-2. Prepare the Dataset
-Ensure that your stock price data file is in the root directory of the project. The dataset should be a .csv file containing the required stock price information. For this project, the file should be named stock_price.csv.
 
-Required Columns:
+
+2. Prepare the Dataset
+Ensure that your stock price data file is in the root directory of the project. The dataset should be a .csv file named stock_price.csv, containing the following columns:
+
 Date (as 日付け)
 Open Price (as 始値)
 Close Price (as 終値)
@@ -60,37 +62,28 @@ High Price (as 高値)
 Low Price (as 安値)
 Volume (as 出来高)
 Change Rate % (as 変化率 %)
-3. Run the Python Script
-Once you have the data in place, you can run the main script that processes the data, builds the LSTM model, and makes predictions. Use the following command to execute the script:
 
-bash
-Copy code
+3. Run the Python Script
+Once the data is prepared, run the main script to process the data, build the LSTM model, and make predictions. Use this command to execute the script:
+
+```bash
 python stock_price_prediction.py
+
 4. View the Output
 Model Training:
-
-The script will train an LSTM model on the historical stock data, showing progress through epochs.
+The script will train an LSTM model on the historical stock data, with progress displayed during the epochs.
 Evaluation Metrics:
-
-After training, you will see the RMSE values for both the training and testing datasets.
-The script will also calculate the accuracy of the model in predicting the stock price movement direction (up or down).
+After training, you will see the RMSE values for both training and testing datasets.
+The script will also calculate the accuracy of the model in predicting stock price movement (up or down).
 Plots:
-
-The script will generate several plots:
 A comparison of predicted vs actual stock prices.
 The training loss and validation loss over time.
 A detailed plot comparing predicted prices with actual prices in the test dataset.
-5. Analyze Results
-After the model is trained and tested, the following metrics will be printed in the console:
 
+5. Analyze Results
+Once the model is trained and tested, the following metrics will be printed in the console:
+
+```bash
 Train RMSE: X (replace with actual value)
 Test RMSE: Y (replace with actual value)
 Direction Accuracy: Z% (replace with actual value)
-
-### Key sections:
-- **Clone the Repository** explains how to clone the project locally.
-- **Prepare the Dataset** details the requirements for the dataset and the file name format.
-- **Run the Python Script** shows the command to execute the code and its output.
-- **Analyze Results** mentions what to expect after the model runs.
-
-You can customize this `README.md` with your GitHub username and real results from your project, like RMSE and accuracy values.
