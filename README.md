@@ -47,10 +47,10 @@ To successfully run the project and replicate the results, follow these steps:
 ## 1. Clone the Repository
 First, clone this repository to your local machine using:
 
-```bash
+```
 git clone https://github.com/yourusername/stock-price-prediction.git
 cd stock-price-prediction
-
+```
 
 2. Prepare the Dataset
 Ensure that your stock price data file is in the root directory of the project. The dataset should be a .csv file named stock_price.csv, containing the following columns:
@@ -66,8 +66,9 @@ Change Rate % (as 変化率 %)
 3. Run the Python Script
 Once the data is prepared, run the main script to process the data, build the LSTM model, and make predictions. Use this command to execute the script:
 
-```bash
+```
 python stock_price_prediction.py
+```
 
 4. View the Output
 Model Training:
@@ -83,7 +84,8 @@ A detailed plot comparing predicted prices with actual prices in the test datase
 5. Analyze Results
 Once the model is trained and tested, the following metrics will be printed in the console:
 
-```bash
+```
 Train RMSE: X (replace with actual value)
 Test RMSE: Y (replace with actual value)
 Direction Accuracy: Z% (replace with actual value)
+```
