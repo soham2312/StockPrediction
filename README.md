@@ -44,7 +44,7 @@ pip install pandas numpy matplotlib scikit-learn keras seaborn
 
 To successfully run the project and replicate the results, follow these steps:
 
-## 1. Clone the Repository
+## Clone the Repository
 First, clone this repository to your local machine using:
 
 ```
@@ -52,7 +52,7 @@ git clone https://github.com/yourusername/stock-price-prediction.git
 cd stock-price-prediction
 ```
 
-2. Prepare the Dataset
+## Prepare the Dataset
 Ensure that your stock price data file is in the root directory of the project. The dataset should be a .csv file named stock_price.csv, containing the following columns:
 
 Date (as 日付け)
@@ -63,17 +63,18 @@ Low Price (as 安値)
 Volume (as 出来高)
 Change Rate % (as 変化率 %)
 
-3. Run the Python Script
+## Run the Python Script
 Once the data is prepared, run the main script to process the data, build the LSTM model, and make predictions. Use this command to execute the script:
 
 ```
 python stock_price_prediction.py
 ```
 
-4. View the Output
+## View the Output
 Model Training:
 The script will train an LSTM model on the historical stock data, with progress displayed during the epochs.
-Evaluation Metrics:
+
+## Evaluation Metrics:
 After training, you will see the RMSE values for both training and testing datasets.
 The script will also calculate the accuracy of the model in predicting stock price movement (up or down).
 Plots:
@@ -81,7 +82,7 @@ A comparison of predicted vs actual stock prices.
 The training loss and validation loss over time.
 A detailed plot comparing predicted prices with actual prices in the test dataset.
 
-5. Analyze Results
+## Analyze Results
 Once the model is trained and tested, the following metrics will be printed in the console:
 
 ```
