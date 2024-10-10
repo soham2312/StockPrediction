@@ -36,9 +36,9 @@ The model uses LSTM layers to capture the temporal dependencies of stock prices.
 
 To run this project locally, you'll need to install the following dependencies:
 
-```bash
+```
 pip install pandas numpy matplotlib scikit-learn keras seaborn
-
+```
 
 # Running the Project
 
